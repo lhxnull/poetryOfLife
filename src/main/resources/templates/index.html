@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <title>哈喽杨老师~</title>
+
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script th:src="@{/js/jquery.min.js}"></script>
+
+
+</head>
+<body>
+    <!--<div>
+        <video   id="myvideo"  controls="controls" autoplay="autoplay" >
+
+            <source th:src="@{/viedo/ynViedo.mp4}" type="video/ogg" >
+
+        </video>
+    </div>-->
+
+
+
+
+<audio loop="loop" controls="controls" autoplay="autoplay" id="vd">
+    <source th:src="@{/mp3/zzsc.mp3}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div id="background" class="wall"></div>
+    <div class="pa">
+        <p><a href="/yn/home" >我们会深情拥抱我们会一直到老</a></p>
+
+    </div>
+    <div id="midground" class="wall"></div>
+    <div id="foreground" class="wall"></div>
+    <div id="top" class="wall"></div>
+
+</body>
+<script language="javascript">
+    $(document).ready(function(){
+        video.play();
+    });
+//,'/yn/viedo/ynViedo2.mp4'
+    var vList = ['/yn/viedo/ynViedo.mp4' ]; // 初始化播放列表   
+    var vLen = vList.length;
+    var curr = 0;
+    var video = document.getElementById("myvideo");
+    video.addEventListener('ended', function(){
+        play();
+    });
+
+    function play() {
+        video.src = vList[curr];
+        video.load();
+        video.play();
+        curr++;
+        if(curr >= vLen){
+            curr = 0; //重新循环播放 
+        }
+
+    }
+</script>
+
+</html>

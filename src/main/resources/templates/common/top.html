@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org" xmlns:margin-down="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>要做的100件事</title>
+    <link th:href="@{/css/style.min.css}" rel="stylesheet">
+</head>
+<body>
+<div th:fragment="top">
+    <div class=" container grid-sm s-content header">
+        <div class=" ">
+            <h1 class="logo">
+                <img th:src="@{/images/love.png}"/>
+                <a href="/yn/">要做的100件事</a>
+            </h1>
+            <p class="description">这里记录了 <a href="febs/views/add.html" >@刘洪兴</a>
+                和 <a href="/yn/photo/ynPhotos" >@杨宁</a> 要做的100件事。
+                <br>相信我们还会留下更多美好的回忆，谢谢大家的 <a href="/yn/photo/wish">祝福</a> ！
+                <br><font   color="red">功能未完待续---</font></p>
+        </div>
+        <audio loop="loop" controls="controls"  id="vd">
+            <source th:src="@{/mp3/zzsc.mp3}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+
+</div>
+</body>
+</html>
